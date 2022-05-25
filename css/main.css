@@ -1,0 +1,35 @@
+body {
+    background-color: #ffaa00;
+    margin: 5vw;
+    padding: 0;
+}
+
+.stack {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 5vw;
+    width: 100%;
+    height: 60vh;
+    padding: 5vw 0 0 0;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    font-size: 60pt;
+}
+
+.task {
+    display: flex;
+    flex-direction: row;
+    background-color: #00ffdd;
+    width: 100%;
+    height: 30vh;
+    padding: 0 0 5vw 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 180pt;
+}
