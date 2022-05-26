@@ -56,6 +56,11 @@ function press(event){
   let curTask = task.querySelectorAll('#taskCard');
 
   if(pressed == curTask[cursor].innerText){
+    console.log(alphabet.indexOf(pressed));
+    let audio = new Audio();
+    audio.src = sounds[alphabet.indexOf(pressed)];
+    audio.autoplay = true;
+
     curTask[cursor].className = 'solved';
     //event.target.remove();
     event.target.style.visibility = 'hidden';
