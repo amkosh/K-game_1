@@ -13,6 +13,7 @@ html {
   section {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content:stretch;
     height: 100%;
   }
@@ -26,6 +27,21 @@ html {
     height: 80%;
     padding: 10px 0 0 0;
 }
+
+.answer {
+    width: 80%;
+    height: 80%;
+    padding: 20px 0 0 0;
+}
+
+.picture {
+    width: 100%;
+    border-radius: 10px;
+    border: solid 2px #9B878B;
+    box-shadow: #6B434C 0px 2px 5px; 
+}
+
+
 
 .card {
     display: flex;

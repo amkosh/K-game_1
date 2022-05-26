@@ -11,6 +11,7 @@ function taskLoad(){
   word = words[getRandomInt(0, words.length-1)];
   task.innerHTML = '';
   stack.innerHTML = '';
+  stack.className = 'stack';
 
   for(i = 0; i < word.length; i++){
     let letter = word[i];
@@ -76,8 +77,23 @@ function press(event){
 
   if(cursor >= curTask.length){
     cursor = 0;
-    taskLoad();
+    answer();
+    //taskLoad();
   }
+}
+
+//Загрузка картинки
+function answer(){
+  let picNum = words.indexOf(word);
+  stack.innerHTML = '';
+  stack.className = 'answer';
+
+  let img = document.createElement('img');
+  img.alt = word;
+  img.src = 'media/' + picNum + '.jpg';
+  img.className = 'picture';
+  img.addEventListener('click', taskLoad);
+  stack.appendChild(img);  
 }
 
 //Рандомное целое число

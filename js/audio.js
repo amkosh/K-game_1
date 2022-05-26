@@ -40,6 +40,7 @@ const sounds = [];
 for(i = 0; i < 33; i++){
     let aud = new Audio(names[i]);
     //audio.src = names[i];
+    //aud.preload = 'auto';
     sounds.push(aud);
 }
 
