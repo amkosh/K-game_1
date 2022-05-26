@@ -61,12 +61,18 @@ html {
     visibility: hidden;
     justify-content: center;
     align-items: center;
-    background-color: #00BB00;
+    background-color: #4ac3ff;
     font-size: x-large;
     color: #fff;
     box-shadow: #9B878B 0px 2px 5px;
     border-radius: 10px;
     transition: visibility 0.2s ease-in;
+}
+
+@keyframes aim {
+    0% {transform: rotate(0.03turn)}
+    50%{transform: rotate(0);}
+    100%{transform: rotate(-0.03turn);}
 }
 
 .task {
@@ -82,12 +88,21 @@ html {
     border-radius: 10px;
 }
 
+
+
 .task .unsolved {
     color: #fff;
     text-shadow: 0px 1px 1px #6B434C;
 }
 
+.task .active {
+    color: #fff;
+    text-shadow: 0px 1px 1px #6B434C;
+    animation: aim 1s linear infinite alternate;
+    font-size: 110%;
+}
+
 .task .solved {
-    color: #00BB00;
-    text-shadow: none;
+    color: #4ac3ff;
+    text-shadow: 0px 1px 1px #6B434C;
 }

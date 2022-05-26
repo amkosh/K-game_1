@@ -15,7 +15,12 @@ function taskLoad(){
   for(i = 0; i < word.length; i++){
     let letter = word[i];
     let element = document.createElement('p');
-    element.className = 'unsolved';
+    if(i == 0){
+      element.className = 'active';
+    } else {
+      element.className = 'unsolved';
+    }
+    
     element.id = 'taskCard';
     element.innerText = letter;
     task.appendChild(element);
@@ -48,25 +53,28 @@ function drawCards(){
 
 //Обрабатываем нажатие
 function press(event){
-  let audio = new Audio();
+  let pressed = event.target.innerText;
+  let curTask = task.querySelectorAll('#taskCard');
+
   for(card of document.querySelectorAll('#card')){
     card.className = 'card';
   }
-
-  let pressed = event.target.innerText;
-  let curTask = task.querySelectorAll('#taskCard');
 
   if(pressed == curTask[cursor].innerText){
     sounds[alphabet.indexOf(pressed)].play();
     curTask[cursor].className = 'solved';
     event.target.className = 'card__right';
     event.target.style.visibility = 'hidden';
-    cursor++;
+    if(curTask[++cursor]){
+      curTask[cursor].className = 'active';
+    }
+    
   } else {
     sounds[33].play();
     event.target.className = 'card__wrong';
   }
-  if(cursor == curTask.length){
+
+  if(cursor >= curTask.length){
     cursor = 0;
     taskLoad();
   }
