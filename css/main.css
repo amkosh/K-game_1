@@ -54,3 +54,7 @@ html {
     font-size: xx-large;
     color: #6B434C;
 }
+
+.task .unsolved {
+    color: #DED9D4;
+}
