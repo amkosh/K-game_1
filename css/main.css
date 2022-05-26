@@ -5,10 +5,11 @@ body {
     font-family: 'Russo One', sans-serif;
     height: 80vh;
     overflow: hidden;
+    user-select: none;
 }
 
 html {
-    height: 100vh;
+    height: 80vh;
   }
   section {
     display: flex;
@@ -112,7 +113,7 @@ html {
 }
 
 .task .active {
-    color: #fff;
+    color: rgb(0, 60, 255);
     text-shadow: 0px 1px 1px #6B434C;
     animation: aim 1s linear infinite alternate;
     font-size: 110%;
