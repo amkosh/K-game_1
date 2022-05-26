@@ -56,5 +56,6 @@ html {
 }
 
 .task .unsolved {
-    color: #DED9D4;
+    color: #fff;
+    text-shadow: 0px 2px 1px #6B434C;
 }
