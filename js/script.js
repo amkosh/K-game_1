@@ -48,6 +48,7 @@ function drawCards(){
 
 //Обрабатываем нажатие
 function press(event){
+  let audio = new Audio();
   for(card of document.querySelectorAll('#card')){
     card.className = 'card';
   }
@@ -56,8 +57,7 @@ function press(event){
   let curTask = task.querySelectorAll('#taskCard');
 
   if(pressed == curTask[cursor].innerText){
-    console.log(alphabet.indexOf(pressed));
-    let audio = new Audio();
+    console.log(alphabet.indexOf(pressed));;
     audio.src = sounds[alphabet.indexOf(pressed)];
     audio.autoplay = true;
 
@@ -66,6 +66,8 @@ function press(event){
     event.target.style.visibility = 'hidden';
     cursor++;
   } else {
+    audio.src = 'samples/wrong.mp3';
+    audio.autoplay = true;
     event.target.className = 'card__wrong';
   }
   if(cursor == curTask.length){
