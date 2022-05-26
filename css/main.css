@@ -3,7 +3,8 @@ body {
     margin: 5vw;
     padding: 0;
     font-family: 'Rubik Moonrocks', cursive;
-    height: 90vh;
+    height: 100%;
+    overflow: hidden;
 }
 
 html {
