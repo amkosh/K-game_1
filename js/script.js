@@ -57,17 +57,12 @@ function press(event){
   let curTask = task.querySelectorAll('#taskCard');
 
   if(pressed == curTask[cursor].innerText){
-    console.log(alphabet.indexOf(pressed));;
-    audio.src = sounds[alphabet.indexOf(pressed)];
-    audio.autoplay = true;
-
+    sounds[alphabet.indexOf(pressed)].play();
     curTask[cursor].className = 'solved';
-    //event.target.remove();
     event.target.style.visibility = 'hidden';
     cursor++;
   } else {
-    audio.src = 'samples/wrong.mp3';
-    audio.autoplay = true;
+    sounds[33].play();
     event.target.className = 'card__wrong';
   }
   if(cursor == curTask.length){
