@@ -59,6 +59,7 @@ function press(event){
   if(pressed == curTask[cursor].innerText){
     sounds[alphabet.indexOf(pressed)].play();
     curTask[cursor].className = 'solved';
+    event.target.className = 'card__right';
     event.target.style.visibility = 'hidden';
     cursor++;
   } else {

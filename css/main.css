@@ -58,6 +58,7 @@ html {
 
 .card__right {
     display: flex;
+    visibility: hidden;
     justify-content: center;
     align-items: center;
     background-color: #00BB00;
@@ -65,7 +66,7 @@ html {
     color: #fff;
     box-shadow: #9B878B 0px 2px 5px;
     border-radius: 10px;
-    transition: background-color 0.2s ease-in;
+    transition: visibility 0.2s ease-in;
 }
 
 .task {
@@ -78,6 +79,7 @@ html {
     align-items: center;
     font-size: xx-large;
     color: #6B434C;
+    border-radius: 10px;
 }
 
 .task .unsolved {
