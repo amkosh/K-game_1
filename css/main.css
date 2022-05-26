@@ -36,11 +36,36 @@ html {
     color: #9B878B;
     box-shadow: #9B878B 0px 2px 5px;
     border-radius: 10px;
+    transition: background-color 0.2s ease-in;
 }
 
 .card:hover {
     color:#DED9D4;
     background-color: #6B434C;
+}
+
+.card__wrong {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #BB0000;
+    font-size: x-large;
+    color: #fff;
+    box-shadow: #9B878B 0px 2px 5px;
+    border-radius: 10px;
+    transition: background-color 0.2s ease-in;
+}
+
+.card__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00BB00;
+    font-size: x-large;
+    color: #fff;
+    box-shadow: #9B878B 0px 2px 5px;
+    border-radius: 10px;
+    transition: background-color 0.2s ease-in;
 }
 
 .task {
@@ -57,5 +82,10 @@ html {
 
 .task .unsolved {
     color: #fff;
-    text-shadow: 0px 2px 1px #6B434C;
+    text-shadow: 0px 1px 1px #6B434C;
+}
+
+.task .solved {
+    color: #6B434C;
+    text-shadow: none;
 }
