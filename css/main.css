@@ -9,7 +9,13 @@ body {
 html {
     height: 100%;
   }
-
+  section {
+    margin: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content:stretch;
+    height: 100%;
+  }
 
 .stack {
     display: grid;
@@ -24,7 +30,7 @@ html {
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    font-size: xx-large;
+    font-size: x-large;
 }
 
 .task {
