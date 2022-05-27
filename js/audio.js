@@ -56,6 +56,6 @@ speechSynthesis.onvoiceschanged = () => {
     U.voice = voice
     U.lang = 'Russian';
     U.rate = 1;
-    U.pitch = 1.4;
+    U.pitch = 1;
     speechSynthesis.speak(U)
   }
