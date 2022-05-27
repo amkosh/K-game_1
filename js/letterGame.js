@@ -4,8 +4,6 @@ const nums = '0123456789';
 let word = '';
 let cursor = 0;
 
-//taskLoad();
-
 //Заполняем задание
 function letterGameLoad(){
   word = words[getRandomInt(0, words.length-1)];
@@ -77,7 +75,6 @@ function press(event){
   if(cursor >= curTask.length){
     cursor = 0;
     answer();
-    //taskLoad();
   }
 }
 

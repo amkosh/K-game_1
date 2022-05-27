@@ -57,5 +57,12 @@ speechSynthesis.onvoiceschanged = () => {
     U.lang = 'Russian';
     U.rate = 1;
     U.pitch = 1;
-    speechSynthesis.speak(U)
+    //speechSynthesis.speak(U)
+    //Перехват
+    try{
+        speechSynthesis.speak(U)
+    } catch(err) {
+        document.getElementById('error').innerText = err + '\n' + voice;
+    }
+    
   }
