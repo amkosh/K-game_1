@@ -95,7 +95,7 @@ function answer(){
   img.addEventListener('click', taskLoad);
   
   stack.appendChild(img);
-  setTimeout(() => {  convertTextToSpeech(word); }, 900);
+  setTimeout(() => {  convertTextToSpeech(word); }, 1500);
 }
 
 //Рандомное целое число
