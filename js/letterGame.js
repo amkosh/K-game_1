@@ -91,9 +91,8 @@ function answer(){
   img.alt = word;
   img.src = 'media/' + picNum + '.jpg';
   img.className = 'picture';
-  img.addEventListener('click', letterGameLoad);
   
   stack.appendChild(img);
-  setTimeout(() => {  convertTextToSpeech(word); }, 1500);
+  setTimeout(() => {  convertTextToSpeech(word); img.addEventListener('click', letterGameLoad); }, 1500);
 }
 
