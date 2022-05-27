@@ -1,13 +1,13 @@
 const alphabet = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ';
 const nums = '0123456789';
-const task = document.getElementById('task');
-const stack = document.getElementById('stack');
+
 let word = '';
 let cursor = 0;
-taskLoad();
+
+//taskLoad();
 
 //Заполняем задание
-function taskLoad(){
+function letterGameLoad(){
   word = words[getRandomInt(0, words.length-1)];
   task.innerHTML = '';
   stack.innerHTML = '';
@@ -49,7 +49,6 @@ function drawCards(){
     document.getElementById('stack').appendChild(card);
     card.addEventListener('click', press);
   }
-
 }
 
 //Обрабатываем нажатие
@@ -92,29 +91,9 @@ function answer(){
   img.alt = word;
   img.src = 'media/' + picNum + '.jpg';
   img.className = 'picture';
-  img.addEventListener('click', taskLoad);
+  img.addEventListener('click', letterGameLoad);
   
   stack.appendChild(img);
   setTimeout(() => {  convertTextToSpeech(word); }, 1500);
 }
 
-//Рандомное целое число
-function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-//Перемешивание массива
-function shuffle(array) {
-  let currentIndex = array.length,  randomIndex;
-
-  while (currentIndex != 0) {
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
-
-    [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex], array[currentIndex]];
-  }
-  return array;
-}
