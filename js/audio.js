@@ -34,13 +34,10 @@ const names = [
     'samples/33.mp3'
 ]
 
-
 const sounds = [];
 
 for(i = 0; i < 33; i++){
     let aud = new Audio(names[i]);
-    //audio.src = names[i];
-    //aud.preload = 'auto';
     sounds.push(aud);
 }
 
@@ -54,16 +51,11 @@ speechSynthesis.onvoiceschanged = () => {
   }
 
   function convertTextToSpeech(text) {
-    // Получаем текст
     U.text = text;
-    // Получаем выбранный голос
     const voice = voices[0]
-    // Передаем голос и другие настройки экземпляру
     U.voice = voice
-    // язык
     U.lang = 'Russian';
-    // Запускаем озвучивание!
     U.rate = 1;
-    U.pitch = 1.2;
+    U.pitch = 1.4;
     speechSynthesis.speak(U)
   }
