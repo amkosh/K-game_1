@@ -93,7 +93,9 @@ function answer(){
   img.src = 'media/' + picNum + '.jpg';
   img.className = 'picture';
   img.addEventListener('click', taskLoad);
-  stack.appendChild(img);  
+  
+  stack.appendChild(img);
+  setTimeout(() => {  convertTextToSpeech(word); }, 900);
 }
 
 //Рандомное целое число

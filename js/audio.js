@@ -45,3 +45,25 @@ for(i = 0; i < 33; i++){
 }
 
 sounds.push(new Audio('samples/wrong.mp3'));
+
+
+const U = new SpeechSynthesisUtterance();
+let voices = speechSynthesis.getVoices();
+speechSynthesis.onvoiceschanged = () => {
+    voices = speechSynthesis.getVoices();
+  }
+
+  function convertTextToSpeech(text) {
+    // Получаем текст
+    U.text = text;
+    // Получаем выбранный голос
+    const voice = voices[0]
+    // Передаем голос и другие настройки экземпляру
+    U.voice = voice
+    // язык
+    U.lang = 'Russian';
+    // Запускаем озвучивание!
+    U.rate = 1;
+    U.pitch = 1.6;
+    speechSynthesis.speak(U)
+  }
