@@ -60,7 +60,12 @@ function pairGameLoad(){
 let currentCard = null;
 let prevCard = null;
 let pairCount = 0;
+
 function pressPair(event){
+    for(card of document.querySelectorAll('.card__pair__wrong')){
+        card.className = 'card__pair';
+      }
+
     if(prevCard == null){
         prevCard = event.path[1];
         prevCard.removeEventListener('click', pressPair);
@@ -81,6 +86,8 @@ function pressPair(event){
     } else {
         console.log('Fail!' + currentCard);
         prevCard.addEventListener('click', pressPair);
+        prevCard.className = 'card__pair__wrong';
+        currentCard.className = 'card__pair__wrong';
         prevCard = null;
         currentCard = null;
     }

@@ -149,6 +149,18 @@ html {
     transition: background-color 0.2s ease-in;
 }
 
+.card__pair__wrong {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #BB0000;
+    font-size: large;
+    color: #fff;
+    box-shadow: #1a512e 0px 2px 5px;
+    border-radius: 10px;
+    transition: background-color 0.2s ease-in;
+}
+
 .card__right {
     display: flex;
     visibility: hidden;
