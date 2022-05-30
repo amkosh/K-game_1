@@ -23,11 +23,19 @@ pairGame.className = 'btnMenu';
 pairGame.setAttribute('onclick', 'pairGameLoad()')
 stack.appendChild(pairGame);
 
-let wordGame4 = document.createElement('div');
-wordGame4.innerText = 'УЧИМ ЦВЕТА';
-wordGame4.className = 'btnMenu';
-stack.appendChild(wordGame4);
+let flipGame = document.createElement('div');
+flipGame.innerText = 'ПАМЯТЬ';
+flipGame.className = 'btnMenu';
+flipGame.setAttribute('onclick', 'flipGameLoad()')
+stack.appendChild(flipGame);
 
+/*
+let flipGame = document.createElement('div');
+flipGame.innerText = 'УЧИМ ЦВЕТА';
+flipGame.className = 'btnMenu';
+flipGame.setAttribute('onclick', 'flipGameLoad()')
+stack.appendChild(flipGame);
+*/
 
 
 

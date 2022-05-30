@@ -8,12 +8,13 @@ function pgStyles(){
     task.className = 'hidden';
     stack.style.height = '100%';
     stack.className = 'stack__pair'
-    pics = [];
-    flipCards = [];
 }
 
 function pairGameLoad(){
     pgStyles();
+    pics = [];
+    flipCards = [];
+    pairCount = 0;
 
     //Заполним массив словами
     
@@ -30,7 +31,7 @@ function pairGameLoad(){
     for(i = 0; i < 10; i++){
         let img = document.createElement('img');
         img.src = 'media/' + words.indexOf(pics[i]) + '.jpg';
-        img.className = 'picture';
+        img.className = 'picture__pair';
 
         let card = document.createElement('div');
         card.id = i;
@@ -41,7 +42,7 @@ function pairGameLoad(){
 
         let imgTwin = document.createElement('img');
         imgTwin.src = 'media/' + words.indexOf(pics[i]) + '.jpg';
-        imgTwin.className = 'picture';
+        imgTwin.className = 'picture__pair';
 
         let cardTwin = document.createElement('div');
         cardTwin.id = i;
@@ -57,9 +58,9 @@ function pairGameLoad(){
     }
 }
 
-let currentCard = null;
-let prevCard = null;
-let pairCount = 0;
+//let currentCard = null;
+//let prevCard = null;
+//let pairCount = 0;
 
 function pressPair(event){
     for(card of document.querySelectorAll('.card__pair__wrong')){
