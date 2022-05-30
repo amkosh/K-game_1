@@ -17,10 +17,11 @@ wordGame.className = 'btnMenu';
 stack.appendChild(wordGame);
 
 
-let wordGame3 = document.createElement('div');
-wordGame3.innerText = 'ИЩЕМ ПАРЫ';
-wordGame3.className = 'btnMenu';
-stack.appendChild(wordGame3);
+let pairGame = document.createElement('div');
+pairGame.innerText = 'ИЩЕМ ПАРЫ';
+pairGame.className = 'btnMenu';
+pairGame.setAttribute('onclick', 'pairGameLoad()')
+stack.appendChild(pairGame);
 
 let wordGame4 = document.createElement('div');
 wordGame4.innerText = 'УЧИМ ЦВЕТА';
